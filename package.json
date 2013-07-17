@@ -1,0 +1,9 @@
+{
+  "name": "flexbox",
+  "version": "1.0.0",
+  "author": "rbc",
+  "description": "flexbox ver1",
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}

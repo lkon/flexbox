@@ -1,0 +1,88 @@
+.g-flex{
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+}
+
+/* Свойства Flex контейнера: */
+.c-flex-direction( @value ) { /* row | row-reverse | column | column-reverse */
+	-webkit-flex-direction: @value;
+	-moz-flex-direction: @value;
+	-ms-flex-direction: @value;
+	flex-direction: @value;
+}
+
+.c-justify-content( @value ) {/* flex-start | flex-end | center | space-between | space-around */
+	-webkit-justify-content: @value;
+	-moz-justify-content: @value;
+	-ms-justify-content: @value;
+	justify-content: @value;
+}
+/* align-items является дополнительным свойством к justify-content */
+.c-align-items( @value ) {/* flex-start | flex-end | center | baseline | stretch */
+	-webkit-align-items: @value;
+	-moz-align-items: @value;
+	-ms-align-items: @value;
+	align-items: @value;
+}
+
+.c-flex-wrap( @value ){/* nowrap | wrap | wrap-reverse */
+	-webkit-flex-wrap: @value;
+	-moz-flex-wrap: @value;
+	-ms-flex-wrap: @value;
+	flex-wrap: @value;
+}
+/* align-content изменяет поведение свойства flex-wrap */
+.c-align-content( @value ) {/* flex-start | flex-end | center | space-between | space-around | stretch */
+	-webkit-align-content: @value;
+	-moz-align-content: @value;
+	-ms-align-content: @value;
+	align-content: @value;
+}
+
+
+/* Свойства flex-пунктов: */
+.i-order( @value ){/* Number */
+	-webkit-order: @value;
+	-moz-order: @value;
+	-ms-order: @value;
+	order: @value;
+}
+
+.i-align-self( @value ){ /* auto | flex-start | flex-end | center | baseline | stretch */
+	-webkit-align-self: @value;
+	-moz-align-self: @value;
+    -ms-flex-item-align: @value;
+    -ms-align-self: @value;
+    align-self: @value;
+}
+
+.i-flex( @value ) { /* none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+    -webkit-flex: @value;
+    -moz-flex: @value;
+    -ms-flex: @value;
+    flex: @value;
+}
+.i-flex-grow( @value ) { /* Number */
+    -webkit-flex-grow: @value;
+    -moz-flex-grow: @value;
+    -ms-flex-positive: @value;
+    -ms-flex-grow: @value;
+    flex-grow: @value;
+}
+.i-flex-shrink( @value ) { /* Number */
+    -webkit-flex-shrink: @value;
+    -moz-flex-shrink: @value;
+    -ms-flex-negative: @value;
+    -ms-flex-shrink: @value;
+    flex-shrink: @value;
+}
+.i-flex-basis( @value ) { //* width + px */
+    -webkit-flex-basis: @value;
+    -moz-flex-basis: @value;
+    -ms-flex-preferred-size: @value;
+    -ms-flex-basis: @value;
+    flex-basis: @value;
+}

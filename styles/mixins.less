@@ -1,0 +1,103 @@
+.inline-block {
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.disable-select {
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.box-shadow (@string) {
+    -webkit-box-shadow: @string;
+    -khtml-box-shadow: @string;
+    -moz-box-shadow: @string;
+    -o-box-shadow: @string;
+    box-shadow: @string;
+}
+
+.user-select(@argument: none) {
+  -webkit-user-select: @argument;
+  -moz-user-select: @argument;
+  -ms-user-select: @argument;
+  user-select: @argument;
+}
+
+.transition(@duration:.3s, @ease:ease-out) {
+  -webkit-transition: all @duration @ease;
+  -moz-transition: all @duration @ease;
+  transition: all @duration @ease;
+}
+
+.border-radius(@radius: 0) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.opacity( @opacity: 0.3 ){
+    @opacityIE: @opacity * 100;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=@opacityIE);
+    -moz-opacity: @opacity;
+    -khtml-opacity: @opacity;
+    opacity: @opacity;
+}
+
+.clear{
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+.m-clearfix {
+    *zoom: 1;
+    
+    &:before,
+    &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+
+.link-hover (@decoration) when (@decoration = 'none') {
+   text-decoration: underline;
+
+   &:hover{
+        text-decoration: none;
+    } 
+}
+
+.link-hover (@decoration) when (@decoration = 'underline') {
+   text-decoration: none;
+
+   &:hover{
+        text-decoration: underline;
+    } 
+}
+
+.decoration-none{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.box-sizing (){
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.box-sizing ( @value ) when ( @value = content-box ){
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
